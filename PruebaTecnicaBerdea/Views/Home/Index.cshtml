@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Buscar Pokémon";
+}
+
+<h1>Buscar Pokémon</h1>
+
+<form asp-action="SearchPokemon" method="post">
+    <label for="pokemonName">Nombre del Pokémon:</label>
+    <input type="text" id="pokemonName" name="pokemonName" required />
+    <button type="submit">Buscar</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <p>@ViewBag.Message</p>
+}
+
+@if (ViewBag.PokemonName != null)
+{
+    <h2>Resultado:</h2>
+    <p>Nombre: @ViewBag.PokemonName</p>
+}
