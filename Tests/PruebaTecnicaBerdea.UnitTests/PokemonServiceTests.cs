@@ -5,6 +5,8 @@ using PruebaTecnicaBerdea.Core.Domain;
 
 public class PokemonServiceTests
 {
+    /*Este test unitario verifica que el método GetPokemonByNameAsync de la clase 
+    PokemonService funciona correctamente cuando se busca un Pokémon que existe en la base de datos.*/
     [Fact]
     public async Task GetPokemonByNameAsync_ReturnsPokemon_WhenPokemonExists()
     {
@@ -25,7 +27,7 @@ public class PokemonServiceTests
         Assert.NotNull(result);
         Assert.Equal(expectedPokemon.Name, result.Name);
     }
-
+    //Test para añadir un pokemon cuando no existe
     [Fact]
     public async Task AddPokemonAsync_AddsPokemon_WhenPokemonIsValid()
     {

@@ -4,10 +4,10 @@ namespace PruebaTecnicaBerdea.Core.Domain
 {
     public interface IPokemonRepository
     {
-        // Declaración del método (sin cuerpo)
+        // Declaración del método
         Task<Pokemon> GetByNameAsync(string name);
 
-        // Declaración del método (sin cuerpo)
+        // Declaración del método
         Task AddAsync(Pokemon pokemon);
     }
 }

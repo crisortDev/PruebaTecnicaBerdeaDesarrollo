@@ -1,22 +1,22 @@
 ﻿@{
-    ViewBag.Title = "Buscar Pokémon";
+    ViewBag.Title = "Buscar Pokémon"; // Título de la página.
 }
 
-<h1>Buscar Pokémon</h1>
+<h1>Buscar Pokémon</h1> <!-- Título principal -->
 
-<form asp-action="SearchPokemon" method="post">
-    <label for="pokemonName">Nombre del Pokémon:</label>
-    <input type="text" id="pokemonName" name="pokemonName" required />
-    <button type="submit">Buscar</button>
+<form asp-action="SearchPokemon" method="post"> <!-- Formulario para buscar Pokémon -->
+    <label for="pokemonName">Nombre del Pokémon:</label> <!-- Etiqueta del campo -->
+    <input type="text" id="pokemonName" name="pokemonName" required /> <!-- Campo de texto obligatorio -->
+    <button type="submit">Buscar</button> <!-- Botón de envío -->
 </form>
-
-@if (ViewBag.Message != null)
+<!-- Si hay un mensaje -->
+@if (ViewBag.Message != null) 
 {
-    <p>@ViewBag.Message</p>
+    <p>@ViewBag.Message</p> <!-- Mostrar el mensaje -->
 }
-
+<!-- Si se encontró un Pokémon -->
 @if (ViewBag.PokemonName != null)
 {
-    <h2>Resultado:</h2>
-    <p>Nombre: @ViewBag.PokemonName</p>
+    <h2>Resultado:</h2> <!-- Título de la sección de resultados -->
+    <p>Nombre: @ViewBag.PokemonName</p> <!-- Mostrar el nombre del Pokémon -->
 }

@@ -12,6 +12,7 @@ public class SearchPokemonUseCase
 
     public async Task<(string Message, Pokemon Pokemon)> Execute(string pokemonName)
     {
+        //Este caso de uso se encarga de buscar un Pokémon en la base de datos y, si no existe, lo inserta para futuras consultas
         // Buscar el Pokémon en la base de datos
         var pokemon = await _pokemonRepository.GetByNameAsync(pokemonName);
 
